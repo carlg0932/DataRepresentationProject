@@ -19,6 +19,7 @@ import { FormsModule } from "@angular/forms";
 //importing my components.
 import { RecipePostComponent } from './recipe-post/recipe-post.component';
 import { ReceipeListComponent } from './receipe-list/receipe-list.component';
+import { PostService } from './post.service';
 
 const appRoutes: Routes = [
   {
@@ -52,7 +53,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
