@@ -1,3 +1,30 @@
-<p>
-  recipe-post works!
-</p>
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        minlength="3"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Enter your receipe title here.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="4"
+        name="content"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Enter your receipe description here.</mat-error>
+    </mat-form-field>
+    <br><br><br><br>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Receipe</button>
+  </form>
+</mat-card>
