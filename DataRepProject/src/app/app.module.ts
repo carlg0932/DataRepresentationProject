@@ -21,6 +21,7 @@ import { FormsModule } from "@angular/forms";
 import { RecipePostComponent } from './recipe-post/recipe-post.component';
 import { ReceipeListComponent } from './receipe-list/receipe-list.component';
 import { PostService } from './post.service';
+import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
 
 const appRoutes: Routes = [
   {
@@ -30,6 +31,10 @@ const appRoutes: Routes = [
   {
     path: 'create',
     component: RecipePostComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditRecipeComponent
   }
 ];
 
@@ -38,7 +43,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ReceipeListComponent,
-    RecipePostComponent
+    RecipePostComponent,
+    EditRecipeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

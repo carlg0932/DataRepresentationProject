@@ -32,4 +32,3 @@ export class ReceipeListComponent implements OnInit {
      
    }
   }
-  //when uncommenting this add an extra closing curly bracket
