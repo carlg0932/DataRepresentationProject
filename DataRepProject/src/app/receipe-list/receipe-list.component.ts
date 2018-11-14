@@ -23,13 +23,13 @@ export class ReceipeListComponent implements OnInit {
     });
    }
 
-   /*
    onDelete(id:String){
      console.log("Delete called "+ id);
      this.ps.deletePost(id).subscribe(() =>
      {
         this.ngOnInit();
      })
-     */
+     
    }
+  }
   //when uncommenting this add an extra closing curly bracket
