@@ -1,1 +1,7 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-toolbar-row {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.25em;
+    color: black;
+}
