@@ -12,7 +12,8 @@ export class RecipePostComponent implements OnInit {
   constructor(private service:PostService) { }
 
   onAddPost(form: NgForm) {
-
+    if (!form.valid)
+    return;
     this.service.addPost(form.value.title, form.value.content).subscribe();
     
     console.log(form.value);

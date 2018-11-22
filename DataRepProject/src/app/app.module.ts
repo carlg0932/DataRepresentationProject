@@ -10,6 +10,10 @@ import { MatInputModule,
   MatToolbarModule,
   MatExpansionModule} from '@angular/material'; 
 
+  //import datepicker 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -58,7 +62,10 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
