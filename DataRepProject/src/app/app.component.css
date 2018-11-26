@@ -1,7 +1,22 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 .mat-toolbar-row {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.25em;
+    font-family: 'Marck Script', cursive;
+    margin: 1%;
+    font-size: 1.5em;
     color: black;
+}
+
+.mat-button {
+    font-family: 'Marck Script', cursive;
+    font-size: 0.8em;
+    transition: all .2s ease-in-out;
+
+}
+
+.mat-button:hover { 
+    background-color: yellow;
+    transform: scale(1.05);
+    border-radius: 25px;
+    border: 2px solid black;
 }
