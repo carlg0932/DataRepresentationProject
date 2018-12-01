@@ -17,10 +17,19 @@ export class ReceipeListComponent implements OnInit {
   constructor(private ps:PostService){}
 
   ngOnInit(){
+
+    this.getRecipeDate();
    
     this.ps.getPostsData().subscribe(data => {
         this.posts = data;
     });
+   }
+
+   getRecipeDate(){
+     this.ps.getPostsData().subscribe(data => {
+       this.posts = data;
+       console.log(data)
+     });
    }
 
    onDelete(id:String){

@@ -15,6 +15,7 @@ export class EditRecipeComponent implements OnInit {
   post : any = [];
   myTitle : String;
   myContent : String;
+  myDate : Date;
 
   constructor(private service:PostService, private router:Router, private route:ActivatedRoute){}
 
@@ -30,7 +31,7 @@ export class EditRecipeComponent implements OnInit {
     });
   }
   onEditPost(form: NgForm) {
-    this.service.updatePost(this.post._id, form.value.title, form.value.content).subscribe(() =>
+    this.service.updatePost(this.post._id, form.value.title, form.value.content, form.value.content2, form.value.date).subscribe(() =>
     {
       this.router.navigate(['/list']);
     });

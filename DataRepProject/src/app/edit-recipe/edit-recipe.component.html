@@ -10,7 +10,7 @@
         #title="ngModel"
         >
     </mat-form-field>
-    <br><br>
+
     <mat-form-field>
       <textarea
         matInput
@@ -22,7 +22,20 @@
       </textarea>
       <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
-    <br><br>
+
+        <!--Date Picker-->
+        <mat-form-field>
+            <input matInput 
+            [matDatepicker]="picker" 
+            placeholder="Choose a date"
+            name="date"
+            ngModel={{post.date}}
+            required
+            #date="ngModel">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
     <button
       mat-raised-button
       color="accent"

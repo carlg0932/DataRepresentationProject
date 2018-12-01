@@ -4,3 +4,16 @@ mat-form-field,
 textarea {
   width: 100%;
 }
+
+h2 {
+  font-family: 'Marck Script', cursive;
+  font-size: 1.5em;
+  color: black;
+}
+
+button {
+  font-family: 'Marck Script', cursive;
+  font-size: 1.5em;
+  color: black;
+
+}

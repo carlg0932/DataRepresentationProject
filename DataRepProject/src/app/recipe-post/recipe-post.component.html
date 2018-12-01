@@ -1,26 +1,50 @@
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    
+    <!--Recipe title-->
+    <h2>Recipe Title</h2>
     <mat-form-field>
       <input
-        matInput
+        matInput placeholder="e.g. White Chocolate Cheese Cake"
         type="text"
         name="title"
         ngModel
         required
         minlength="3"
         #title="ngModel">
-      <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+      <mat-error *ngIf="title.invalid">Please enter the name of your recipe</mat-error>
     </mat-form-field>
+
+    <!--Recipe Description-->
+    <h2>Recipe Description</h2>
     <mat-form-field>
       <textarea
-        matInput
+        matInput placeholder=" e.g. It's the perfect make-ahead dessert for a dinner party or a special occasion."
         rows="4"
         name="content"
         ngModel
         required
         #content="ngModel"></textarea>
-      <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+      <mat-error *ngIf="content.invalid">Please enter a description and ingredients</mat-error>
     </mat-form-field>
+
+    <!--Number of Calories-->
+    <h2>Number of Calories</h2>
+    <mat-form-field>
+      <input
+        matInput placeholder="e.g. White Chocolate Cheese Cake"
+        type="number"
+        name="content2"
+        ngModel
+        required
+        minlength="1"
+        #content2="ngModel">
+      <mat-error *ngIf="content2.invalid">Please enter the number of calories your recipe contains.</mat-error>
+    </mat-form-field>
+    
+    
+    <!--Date Picker-->
+    <h2>Date of Recipe</h2>
     <mat-form-field>
       <input matInput 
       [matDatepicker]="picker" 
@@ -28,13 +52,17 @@
       name="date"
       ngModel
       required
-      #date="ngModel">
+      [ngModel] = "date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+    
+    <!--Button to Submit-->
     <button
       mat-raised-button
       color="accent"
-      type="submit">Save Post</button>
+      type="submit">Submit Recipe
+    </button>
+
   </form>
 </mat-card>

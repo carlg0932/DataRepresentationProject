@@ -11,7 +11,9 @@ mongoose.connect(mongoDB);
 var Schema = mongoose.Schema;
 var postSchema = new Schema({
     title: String,
-    content: String
+    content: String,
+    content2: String,
+    date: String
 })
 var PostModel = mongoose.model('post', postSchema);
 
@@ -45,7 +47,9 @@ app.post('/api/posts', function(req, res){
 
     PostModel.create({
         title: req.body.title,
-        content: req.body.content
+        content: req.body.content,
+        content2: req.body.content2,
+        date: req.body.date,
     });
     res.send('Item added');
 
